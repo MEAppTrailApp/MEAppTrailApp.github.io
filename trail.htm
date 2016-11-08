@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>App Install Page</title>
+<style type="text/css">
+body {
+	background: url(bkg.png) repeat #c5ccd4;
+	font-family: Helvetica, arial, sans-serif;
+}
+
+.congrats {
+	font-size: 16pt;
+	padding: 6px;
+	text-align: center;
+}
+
+.ctx{
+	font-size: 16pt;
+	text-align: center;
+	color: white;
+	background-color:#1376A1;
+border: 1px #ccc solid;
+	border-radius: 14px;
+}
+
+.ctx2{
+	font-size: 12pt;
+	text-align: center;
+	color: white;
+	background-color:#1376A1;
+	border: 1px #ccc solid;
+	border-radius: 14px;
+}
+
+.step {
+	background: white;
+	border: 1px #ccc solid;
+	border-radius: 14px;
+	padding: 4px 10px;
+	margin: 10px 0;
+}
+
+.instructions {
+	font-size: 10pt;
+}
+
+.arrow {
+	font-size: 15pt;
+}
+
+#notSafari{
+	color: red;
+	font-size: 16pt;
+	 display: none;
+	text-align: center;
+}
+
+table {
+	width: 100%;
+}
+</style>
+<script type="text/javascript" src="../script/jquery-1.8.0.min.js"></script>
+</head>
+<body>
+
+	<div class="congrats">iOS Message Encryption(ME) Trial Version Download</div>
+	<div id="notSafari">Notice:You hae to use Safari to install ME</div>
+	<!-- <div id="notSafari">注意：必須使用Safari瀏覽器進行ME安裝</div> -->
+	<!-- <div class="ctx">試用期限至 2017-02-01</div> -->
+	<div class="ctx">Expired by 2017-02-01</div>
+	
+	<!-- <div class="ctx">試用期限至開始使用後三個月到期</div> -->
+	<!-- <div class="ctx">Trial period is 3 month</div> -->
+	<div class="step">
+		<table>
+			
+
+			<!-- <tr>
+    <td class="instructions">Install the<br />iOS8 MDM app</td>
+    <td width="24" class="arrow">&rarr;</td>
+    
+    <td width="57" class="imagelink">
+      <a href="itms-services://?action=download-manifest&url=https://192.168.2.2/mdm/ios/ios8/manifest.plist">
+        <img src="./icon.png" height="57" width="57" />
+      </a>
+    </td>
+    </tr> -->
+
+			
+		
+			<tr>
+				<td class="instructions">
+					Install the
+					<br />
+					iOS ME app
+				</td>
+				<td width="24" class="arrow">&rarr;</td>
+
+				<td width="57" class="imagelink">
+					<a
+						href="itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/9ip02ffml63sg31/manifest.plist">
+						<img src="https://dl.dropboxusercontent.com/s/2bhdfn1cdhw9umq/encrypt57.png" height="57" width="57" />
+					</a>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+<script type="text/javascript">
+var is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
+var is_explorer = navigator.userAgent.indexOf('MSIE') > -1;
+var is_firefox = navigator.userAgent.indexOf('Firefox') > -1;
+var is_safari = navigator.userAgent.indexOf("Safari") > -1;
+var is_opera = navigator.userAgent.toLowerCase().indexOf("op") > -1;
+if ((is_chrome) && (is_safari)) {
+	is_safari = false;
+}
+if ((is_chrome) && (is_opera)) {
+	is_chrome = false;
+}
+if(!is_safari){
+	$('#notSafari').show();
+}
+</script>
+</body>
+</html>
+
